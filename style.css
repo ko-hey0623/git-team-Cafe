@@ -1,6 +1,63 @@
 @charset 'utf-8';
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
-    --main-font-coror: #F0EAEA;
-    --sub-font-color: #A47D58;
+    --main-bg-color: #F0EAEA;
+    --sub-bg-color: #A47D58;
+    --font-mincho: 'Shippori Mincho', "Yu Mincho", "游明朝", serif;
+    --font-serif:'Cinzel',serif
+}
+body{
+    font-family: var(--font-mincho);
+    background-color: var(--main-bg-color);
+}
+/*ここからヘッダー*/
+.site-header{
+    width: 100%;
+    display: flex;
+    background-color: var(--sub-bg-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+.header-nav ul{
+    display: flex;
+}
+.header-nav li{
+    display: flex;
+}
+.header-nav li a{
+    color: #F0EAEA;
+    text-decoration: none;
+    font-size: 17px;
+}
+.header-nav li:not(:last-child)::after{
+    content: "|";
+    color: #F0EAEA;
+    margin: 0 18px;
+    opacity: 0.7;
+}
+.header-nav a:hover{
+    opacity: 0.5;
+
+}
+/*ここからメイン*/
+.site-main{
+    padding: 10px 20px;
+}
+/*ここからフッター*/
+.site-footer{
+    width: 100%;
+    display: flex;
+    background-color: var(--sub-bg-color);
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
 }
